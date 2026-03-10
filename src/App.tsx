@@ -136,8 +136,8 @@ export default function App() {
       tags: ["Product Design", "Multi-modal AI", "Full-stack", "PWA"],
     },
     {
-      title: "The Alchemy — 炼金术师",
-      description: "基于荣格心理学的 AI 对话伙伴。支持梦境解析、投射分析与原型人格对话，RAG 检索荣格全集原典，维护长期记忆与个性化用户画像。",
+      title: "The Alchemy 炼金术师 — 基于荣格理论的 AI 对话伙伴",
+      description: "支持梦境解析、投射分析与原型人格对话，RAG 检索 9 卷荣格全集，12 个原型 Agent 各具独立人格与对话策略，维护跨会话长期记忆与个性化用户画像。",
       link: "https://alchemy-intro.vercel.app/",
       image: "/幻灯片2.png",
       tags: ["LLM Application", "RAG", "Multi-Agent", "Long-term Memory"],
