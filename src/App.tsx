@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
           </span>
         ))}
       </div>
-      <h3 className="text-2xl md:text-3xl font-semibold mb-3 tracking-tight">{title}</h3>
+      <h3 className="text-2xl md:text-3xl font-semibold mb-3 tracking-tight" style={{ fontFamily: '"Noto Serif SC", "Songti SC", serif' }}>{title}</h3>
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <p className="text-white/50 text-sm leading-relaxed max-w-xl">{description}</p>
         <a 
@@ -181,7 +181,7 @@ export default function App() {
                 <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-white/60">Building AI That Truly Matters</span>
               </div>
               
-              <h1 className="text-4xl md:text-[3rem] lg:text-[4rem] font-light tracking-tight leading-[1.1] mb-10 text-white">
+              <h1 className="text-4xl md:text-[3rem] lg:text-[4rem] font-light tracking-tight leading-[1.1] mb-10 text-white" style={{ fontFamily: '"Noto Serif SC", "Songti SC", serif' }}>
                 你好，我是 <br /> 陈诗靓 Janice
               </h1>
               
