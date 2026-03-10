@@ -159,7 +159,10 @@ export default function App() {
             <span className="text-sm font-medium tracking-tight text-white/50">Janice Chen's Portfolio</span>
           </div>
           
-          <div />
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#project-1" onClick={(e) => { e.preventDefault(); document.getElementById('project-1')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }} className="text-sm font-semibold text-white/70 hover:text-white transition-colors cursor-pointer">Milo</a>
+            <a href="#project-2" onClick={(e) => { e.preventDefault(); document.getElementById('project-2')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }} className="text-sm font-semibold text-white/70 hover:text-white transition-colors cursor-pointer">The Alchemy</a>
+          </div>
         </nav>
       </header>
 
@@ -191,10 +194,27 @@ export default function App() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="flex flex-col gap-20"
+              className="flex flex-col gap-28 mt-8"
             >
-              {projects.slice(0, 2).map(({ title, description, link, image, tags }) => (
-                <ProjectCard key={title} title={title} description={description} link={link} image={image} tags={tags} />
+              {projects.slice(0, 2).map(({ title, description, link, image, tags }, i) => (
+                <React.Fragment key={title}>
+                  <div id={`project-${i + 1}`}>
+                    <ProjectCard title={title} description={description} link={link} image={image} tags={tags} />
+                  </div>
+                  {i === 0 && (
+                    <motion.div 
+                      animate={{ y: [0, 8, 0] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="flex flex-col items-center gap-2 -mt-20 cursor-pointer"
+                      onClick={() => document.getElementById('project-2')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                    >
+                      <span className="text-[11px] uppercase tracking-widest text-white/50 font-semibold">More Projects</span>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-white/50">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </motion.div>
+                  )}
+                </React.Fragment>
               ))}
             </motion.div>
           </div>
