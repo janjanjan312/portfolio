@@ -36,27 +36,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
     </div>
     
-    <div className="p-6 md:p-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-      <div className="flex-1">
-        <div className="flex flex-wrap gap-2 mb-3">
-          {tags.map(tag => (
-            <span key={tag} className="text-[11px] uppercase tracking-wider font-semibold px-3 py-1 rounded-full border border-white/10 text-white/50">
-              {tag}
-            </span>
-          ))}
-        </div>
-        <h3 className="text-2xl md:text-3xl font-semibold mb-2 tracking-tight">{title}</h3>
-        <p className="text-white/50 text-sm leading-relaxed max-w-lg">{description}</p>
+    <div className="p-6 md:p-8">
+      <div className="flex flex-wrap gap-2 mb-3">
+        {tags.map(tag => (
+          <span key={tag} className="text-[11px] uppercase tracking-wider font-semibold px-3 py-1 rounded-full border border-white/10 text-white/50">
+            {tag}
+          </span>
+        ))}
       </div>
-      
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-all duration-300 shrink-0"
-      >
-        View Project <ArrowUpRight className="w-4 h-4" />
-      </a>
+      <h3 className="text-2xl md:text-3xl font-semibold mb-3 tracking-tight">{title}</h3>
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <p className="text-white/50 text-sm leading-relaxed max-w-xl">{description}</p>
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-all duration-300 shrink-0"
+        >
+          View Project <ArrowUpRight className="w-4 h-4" />
+        </a>
+      </div>
     </div>
   </motion.div>
 );
@@ -133,14 +132,14 @@ export default function App() {
       description: "多模态饮食助手，支持拍照、语音、文字记录。基于真实生活惯例生成个性化饮食计划，从计划到记录形成完整闭环。",
       link: "https://milo-intro.vercel.app/",
       image: "/幻灯片1.png",
-      tags: ["Product Design", "Multi-modal AI", "Full-stack", "PWA"],
+      tags: ["Product Design", "Multi-modal AI", "Full-stack", "PWA", "Health Management"],
     },
     {
-      title: "The Alchemy 炼金术师 — 基于荣格理论的 AI 对话伙伴",
+      title: "The Alchemy — 基于荣格理论的 AI 咨询师",
       description: "支持梦境解析、投射分析与原型人格对话，RAG 检索 9 卷荣格全集，12 个原型 Agent 各具独立人格与对话策略，维护跨会话长期记忆与个性化用户画像。",
       link: "https://alchemy-intro.vercel.app/",
       image: "/幻灯片2.png",
-      tags: ["LLM Application", "RAG", "Multi-Agent", "Long-term Memory"],
+      tags: ["LLM Application", "RAG", "Multi-Agent", "Long-term Memory", "Psychology"],
     },
   ];
 
