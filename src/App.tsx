@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className="group relative rounded-2xl overflow-hidden bg-zinc-900"
+    className="group relative rounded-2xl overflow-hidden bg-zinc-900 border border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.5)]"
   >
     <div className="relative w-full h-[280px] md:h-[320px] overflow-hidden">
       <img 
@@ -226,8 +226,8 @@ export default function App() {
             <div />
             
             <div className="flex items-center gap-8">
-              <a href="https://www.linkedin.com/in/janicechen0312/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-white/40 hover:text-white transition-colors">LinkedIn</a>
-              <a href="mailto:1262325196@qq.com" className="text-sm font-bold text-white/40 hover:text-white transition-colors">Email</a>
+              <a href="https://www.linkedin.com/in/janicechen0312/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-white/70 hover:text-white transition-colors">LinkedIn</a>
+              <a href="mailto:1262325196@qq.com" className="text-sm font-bold text-white/70 hover:text-white transition-colors">Email</a>
             </div>
 
             <p className="text-sm text-white/30">© 2025 Janice Chen</p>
